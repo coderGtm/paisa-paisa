@@ -1,0 +1,53 @@
+tables
+user, expense, category, settings
+
+-- user
+id
+username
+password_hash
+display_name
+created_at
+updated_at
+
+-- category
+id
+parent_id
+name
+description
+
+-- expense
+id
+user_id
+transaction_time
+amount
+category_id
+description
+created_at
+updated_at
+
+-- settings
+id
+key
+value
+for_user_id
+updated_by_user_id
+updated_at
+
+
+-- functionality
+default admin user (id = 0), creds taken from environment variables
+CRUD for users (admin only)
+CRUD for categories (admin only)
+CRUD for expenses (user can only manage their own expenses)
+view expenses (user can view all expenses, with filtering by date range, category, amount range)
+view categories (all users can view categories in a hierarchical structure)
+user settings (each user can have their own settings stored in the settings table)
+authentication (login/logout)
+authorization (role-based access control: admin and regular user)
+password hashing and salting for user passwords
+data validation for all inputs
+error handling and logging
+pagination for viewing expenses
+search functionality for expenses (by description)
+export expenses to CSV
+concurrency handling for multiple users accessing/modifying data simultaneously
