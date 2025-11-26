@@ -1,0 +1,40 @@
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore Python bytecode and cache files
+*.pyc
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.tox/
+
+# Ignore SQLite database file
+db.sqlite3
+
+# Ignore media and static files (if managed separately or generated)
+media/
+static/
+
+# Ignore logs and backups
+*.log
+*.bak
+
+# Ignore environment variables and settings files
+.env
+local_settings.py
+
+# Ignore IDE and editor specific files
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store # macOS specific
+
+# Ignore deployment-related files
+*.tar.gz
+*.zip
+
+# Ignore Django migration cache (if not desired in version control, though often included)
+# migrations/**/__pycache__/
